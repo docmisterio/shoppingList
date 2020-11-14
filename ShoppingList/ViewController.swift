@@ -52,9 +52,23 @@ class ViewController: UITableViewController {
     }
     
     @objc func deleteList() {
-        shoppingListItems = []
-        let sections = [0]
-        tableView.reloadSections(IndexSet(sections), with: .automatic)
+        let ac = UIAlertController(title: "Are you sure?", message: "This will delete the list.", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .destructive) { [weak self] _ in
+            for _ in self!.shoppingListItems {
+                self!.shoppingListItems.removeAll(keepingCapacity: true)
+            }
+            let sections = [0]
+            self!.tableView.reloadSections(IndexSet(sections), with: .automatic)
+        }
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+        ac.addAction(okButton)
+        ac.addAction(cancelButton)
+        
+        present(ac, animated: true)
+        
+      
+        
+        
     }
     
     func setupRightBarButtonItem() {
