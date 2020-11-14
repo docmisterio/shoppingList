@@ -21,6 +21,13 @@ class ViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            shoppingListItems.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
     @objc func addToList() {
         let ac = UIAlertController(title: "Enter Items", message: nil, preferredStyle: .alert)
         ac.addTextField()
@@ -65,10 +72,6 @@ class ViewController: UITableViewController {
         ac.addAction(cancelButton)
         
         present(ac, animated: true)
-        
-      
-        
-        
     }
     
     func setupRightBarButtonItem() {
