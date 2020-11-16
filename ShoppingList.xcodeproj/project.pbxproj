@@ -13,6 +13,7 @@
 		A459E2D2255DC80C0051EB1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A459E2D0255DC80C0051EB1A /* Main.storyboard */; };
 		A459E2D4255DC80F0051EB1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A459E2D3255DC80F0051EB1A /* Assets.xcassets */; };
 		A459E2D7255DC80F0051EB1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A459E2D5255DC80F0051EB1A /* LaunchScreen.storyboard */; };
+		A4BD82A42562365E0045666E /* extention-tableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BD82A32562365E0045666E /* extention-tableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A459E2D3255DC80F0051EB1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A459E2D6255DC80F0051EB1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A459E2D8255DC80F0051EB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4BD82A32562365E0045666E /* extention-tableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extention-tableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A459E2CA255DC80C0051EB1A /* AppDelegate.swift */,
 				A459E2CC255DC80C0051EB1A /* SceneDelegate.swift */,
 				A459E2CE255DC80C0051EB1A /* ViewController.swift */,
+				A4BD82A32562365E0045666E /* extention-tableView.swift */,
 				A459E2D0255DC80C0051EB1A /* Main.storyboard */,
 				A459E2D3255DC80F0051EB1A /* Assets.xcassets */,
 				A459E2D5255DC80F0051EB1A /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				A459E2CF255DC80C0051EB1A /* ViewController.swift in Sources */,
 				A459E2CB255DC80C0051EB1A /* AppDelegate.swift in Sources */,
+				A4BD82A42562365E0045666E /* extention-tableView.swift in Sources */,
 				A459E2CD255DC80C0051EB1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

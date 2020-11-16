@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     var shoppingListItems = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -12,6 +12,11 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if shoppingListItems.isEmpty {
+            tableView.setEmptyView(title: "The list is empty", message: "Tap the + button to add an item to the list.")
+        } else {
+            tableView.restore()
+        }
         return shoppingListItems.count
     }
     
@@ -39,9 +44,8 @@ class ViewController: UITableViewController {
         }
         
         ac.addAction(submit)
-        
+        tableView.restore()
         present(ac, animated: true)
-        print(shoppingListItems)
     }
     
     func submitItem(newItem: String) {
@@ -70,7 +74,7 @@ class ViewController: UITableViewController {
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
         ac.addAction(okButton)
         ac.addAction(cancelButton)
-        
+    
         present(ac, animated: true)
     }
     
